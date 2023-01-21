@@ -9,6 +9,7 @@ abstract class IFontStyles {
   TextStyle get robotoCondensedRegular;
   TextStyle get robotoCondensedThin;
   TextStyle get robotoCondensedItalic;
+  TextStyle get mealTitle;
 }
 
 class FontStyles implements IFontStyles {
@@ -39,5 +40,11 @@ class FontStyles implements IFontStyles {
   @override
   TextStyle get robotoCondensedItalic => GoogleFonts.robotoCondensed(
         fontStyle: FontStyle.italic,
+      );
+
+  @override
+  TextStyle get mealTitle => GoogleFonts.robotoCondensed(
+        fontSize: 26,
+        color: Colors.white,
       );
 }

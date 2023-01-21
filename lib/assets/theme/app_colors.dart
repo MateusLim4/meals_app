@@ -6,6 +6,7 @@ abstract class IAppColors {
   Color get backgroudColor;
   Color get russianViolet;
   Color get blueViolet;
+  Color get opacityRussianViolet;
 }
 
 class AppColors implements IAppColors {
@@ -19,4 +20,6 @@ class AppColors implements IAppColors {
   Color get russianViolet => const Color.fromARGB(255, 50, 24, 75);
   @override
   Color get blueViolet => const Color.fromARGB(255, 136, 67, 228);
+  @override
+  Color get opacityRussianViolet => const Color.fromRGBO(50, 24, 75, 75);
 }

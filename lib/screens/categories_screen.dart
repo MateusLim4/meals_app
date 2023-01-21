@@ -13,7 +13,7 @@ class CategoriesScreen extends StatelessWidget {
           backgroundColor: AppTheme.colors.primaryColor,
           title: Text(
             "Vamos Cozinhar?",
-            style: AppTheme.fontStyles.raleWayBold,
+            style: AppTheme.fontStyles.title,
           )),
       body: GridView(
         padding: const EdgeInsets.all(25),
