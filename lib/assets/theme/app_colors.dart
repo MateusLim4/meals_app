@@ -11,7 +11,7 @@ abstract class IAppColors {
 
 class AppColors implements IAppColors {
   @override
-  Color get primaryColor => const Color.fromARGB(225, 255, 71, 121);
+  Color get blueViolet => const Color.fromARGB(225, 255, 71, 121);
   @override
   Color get secondaryColor => Colors.amber;
   @override
@@ -19,7 +19,7 @@ class AppColors implements IAppColors {
   @override
   Color get russianViolet => const Color.fromARGB(255, 50, 24, 75);
   @override
-  Color get blueViolet => const Color.fromARGB(255, 136, 67, 228);
+  Color get primaryColor => const Color.fromARGB(255, 136, 67, 228);
   @override
   Color get opacityRussianViolet => const Color.fromRGBO(50, 24, 75, 75);
 }
