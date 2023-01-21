@@ -16,7 +16,7 @@ class MealsApp extends StatelessWidget {
     return MaterialApp(
       title: "Vamos Cozinhar?",
       theme: ThemeData(
-          primarySwatch: AppTheme.colors.primaryColor,
+          primaryColor: AppTheme.colors.primaryColor,
           canvasColor: AppTheme.colors.backgroudColor),
       debugShowCheckedModeBanner: false,
       home: const CategoriesScreen(),
