@@ -24,14 +24,15 @@ class MealsApp extends StatefulWidget {
 class _MealsAppState extends State<MealsApp> {
   Settings settings = Settings();
   List<Meal> avaibleMeals = dummyMeals;
+  List<Meal> favoriteMeals = [];
 
   void filterMeals(Settings settings) {
     setState(() {
       avaibleMeals = dummyMeals.where((meal) {
-        final filterGluten = settings.isGlutenFree! && meal.isGlutenFree;
-        final filterLactose = settings.isLactoseFree! && meal.isLactoseFree;
-        final filterVegan = settings.isVegan! && meal.isVegan;
-        final filterVegetarian = settings.isVegetarian! && meal.isVegetarian;
+        final filterGluten = settings.isGlutenFree! && !meal.isGlutenFree;
+        final filterLactose = settings.isLactoseFree! && !meal.isLactoseFree;
+        final filterVegan = settings.isVegan! && !meal.isVegan;
+        final filterVegetarian = settings.isVegetarian! && !meal.isVegetarian;
 
         return !filterGluten &&
             !filterLactose &&
@@ -39,6 +40,18 @@ class _MealsAppState extends State<MealsApp> {
             !filterVegetarian;
       }).toList();
     });
+  }
+
+  void toggleFavorie(Meal meal) {
+    setState(() {
+      favoriteMeals.contains(meal)
+          ? favoriteMeals.remove(meal)
+          : favoriteMeals.add(meal);
+    });
+  }
+
+  bool isFavorite(Meal meal) {
+    return favoriteMeals.contains(meal);
   }
 
   @override
@@ -51,12 +64,13 @@ class _MealsAppState extends State<MealsApp> {
         canvasColor: AppTheme.colors.backgroudColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: const TabsScreen(),
+      home: TabsScreen(favoriteMeals: favoriteMeals),
       initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.categoriesMeals: (context) =>
             CategoriesMealsScreen(meals: avaibleMeals),
-        AppRoutes.mealDetail: (context) => const MealDetailScreen(),
+        AppRoutes.mealDetail: (context) => MealDetailScreen(
+            onToggleFavorite: toggleFavorie, isFavorite: isFavorite),
         AppRoutes.settings: (context) => SettingsScreen(
               settings: settings,
               onSettingsChanged: filterMeals,
