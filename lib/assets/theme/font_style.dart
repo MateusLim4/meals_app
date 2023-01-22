@@ -14,23 +14,20 @@ abstract class IFontStyles {
 
 class FontStyles implements IFontStyles {
   @override
-  TextStyle get title => GoogleFonts.raleway(
-        fontWeight: FontWeight.w900,
-      );
+  TextStyle get title =>
+      GoogleFonts.raleway(fontWeight: FontWeight.w900, fontSize: 30);
 
   @override
-  TextStyle get raleWayBold => GoogleFonts.raleway(
-        fontWeight: FontWeight.bold,
-      );
+  TextStyle get raleWayBold =>
+      GoogleFonts.raleway(fontWeight: FontWeight.bold, fontSize: 20);
 
   @override
   TextStyle get robotoCondensedBold =>
       GoogleFonts.robotoCondensed(fontWeight: FontWeight.bold, fontSize: 20);
 
   @override
-  TextStyle get robotoCondensedRegular => GoogleFonts.robotoCondensed(
-        fontWeight: FontWeight.normal,
-      );
+  TextStyle get robotoCondensedRegular =>
+      GoogleFonts.robotoCondensed(fontWeight: FontWeight.normal, fontSize: 20);
 
   @override
   TextStyle get robotoCondensedThin => GoogleFonts.robotoCondensed(
