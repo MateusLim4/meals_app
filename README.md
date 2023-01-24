@@ -1,16 +1,11 @@
 # meals_app
 
-A new Flutter project.
+Projeto destinado a estudos de estruturas utilizando o Flutter SDK
 
-## Getting Started
+## Sobre o app
 
-This project is a starting point for a Flutter application.
+Esta aplicação traz uma série de receitas para o usuário, de diversas categorias de alimento.
 
-A few resources to get you started if this is your first Flutter project:
+## Objetivo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+O objetivo desta aplicação, em principal, é exercitar o uso de algumas formas de se trabalhar rotas dentro da aplicação.
